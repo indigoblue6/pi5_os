@@ -1,0 +1,3 @@
+cargo:rustc-link-search=/home/lambda/minimal_pi5_os/target/aarch64-unknown-none/release/build/defmt-53a4d25c54c4552a/out
+cargo:rustc-check-cfg=cfg(c_variadic)
+cargo:rustc-check-cfg=cfg(no_cas)

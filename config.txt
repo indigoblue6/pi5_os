@@ -1,0 +1,36 @@
+# Minimal Pi5 OS Boot Configuration
+# Raspberry Pi 5 specific settings
+
+# Core settings
+arm_64bit=1
+kernel=kernel8.img
+
+[all]
+# UART configuration for debugging
+enable_uart=1
+uart_2ndstage=1
+uart_debug=1
+uart_clkrate=48000000
+uart_baudrate=115200
+
+# RP1 chip configuration (Pi5 I/O chip)
+# Disable PCIe reset to access RP1 from bare metal
+pciex4_reset=0
+
+# Memory settings
+gpu_mem=64
+total_mem=1024
+
+# Boot settings
+disable_splash=1
+boot_delay=0
+
+# Debug settings
+uart_2ndstage=1
+
+# Pi5 specific GPIO/UART
+dtparam=uart0=on
+
+# Disable unused services to reduce boot time
+dtoverlay=disable-wifi
+dtoverlay=disable-bt

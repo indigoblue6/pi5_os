@@ -1,0 +1,30 @@
+[package]
+name = "minimal_pi5_os"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+opt-level = "z"
+lto = true
+codegen-units = 1
+
+[[bin]]
+name = "minimal_pi5_os"
+path = "src/main.rs"
+
+[dependencies]
+tock-registers = "0.8"
+defmt = "0.3"
+defmt-rtt = "0.4"
+
+[dependencies.heapless]
+version = "0.8"
+default-features = false
+
+[dependencies.cortex-a]
+version = "8.1"
+default-features = false

@@ -1,0 +1,11 @@
+[target.'cfg(all(target_arch = "aarch64", target_os = "none"))']
+runner = "qemu-system-aarch64 -machine raspi3b -cpu cortex-a53 -kernel"
+
+[build]
+target = "aarch64-unknown-none"
+
+[target.aarch64-unknown-none]
+rustflags = [
+    "-C", "link-arg=-Tldscript.lds",
+    "-C", "target-feature=+strict-align",
+]
