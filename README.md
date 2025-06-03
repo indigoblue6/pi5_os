@@ -79,7 +79,6 @@ minimal_pi5_os/
 - Rust（nightly版推奨）
 - aarch64-unknown-none ターゲット
 - aarch64-linux-gnu-objcopy（バイナリ生成用）
-- QEMU（テスト用、オプション）
 
 ## インストールとセットアップ
 
@@ -186,13 +185,6 @@ dtoverlay=disable-bt
 - **インタラクティブ**: リアルタイム入力処理
 
 ## 開発とデバッグ
-
-### QEMUでのテスト
-
-```bash
-# 基本的な動作確認（30秒でタイムアウト）
-make qemu
-```
 
 ### デバッグビルド
 

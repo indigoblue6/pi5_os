@@ -25,17 +25,6 @@ clean:
 	cargo clean
 	rm -f $(KERNEL_BIN)
 
-# QEMU test (for basic verification)
-qemu: kernel8.img
-	@echo "Starting QEMU (Ctrl+C to exit)..."
-	timeout 30s qemu-system-aarch64 \
-		-M raspi3b \
-		-cpu cortex-a53 \
-		-kernel $(KERNEL_BIN) \
-		-serial stdio \
-		-display none \
-		-m 1024 || true
-
 # Create SD card image for Pi5
 sdcard: kernel8.img
 	@echo "Creating SD card image..."
