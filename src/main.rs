@@ -13,6 +13,11 @@ mod shell;
 mod interrupt;
 mod gpio;
 mod filesystem;
+mod syscalls;
+mod signals;
+mod ipc;
+mod users;
+mod unix_commands;
 
 use core::{
     arch::global_asm,
@@ -21,6 +26,10 @@ use core::{
 };
 
 use uart::UART;
+use syscalls::init_syscalls;
+use signals::SignalHandler;
+use ipc::IPCManager;
+use users::UserManager;
 
 // Panic handler - pi5_hack style
 #[panic_handler]
@@ -72,6 +81,33 @@ fn clear_bss() {
         
         ptr::write_bytes(bss_start as *mut u8, 0, bss_size * 8);
     }
+}
+
+// Initialize UNIX subsystems
+fn init_unix_subsystems() {
+    UART.write_str("Initializing UNIX subsystems...\r\n");
+    
+    // Initialize syscall manager
+    UART.write_str("  - System calls: ");
+    init_syscalls();
+    UART.write_str("OK\r\n");
+    
+    // Initialize signal manager
+    UART.write_str("  - Signal handling: ");
+    let signal_handler = SignalHandler::new();
+    UART.write_str("OK\r\n");
+    
+    // Initialize IPC manager
+    UART.write_str("  - Inter-process communication: ");
+    let ipc_manager = IPCManager::new();
+    UART.write_str("OK\r\n");
+    
+    // Initialize user manager with root user
+    UART.write_str("  - User management: ");
+    let mut user_manager = UserManager::new();
+    UART.write_str("OK\r\n");
+    
+    UART.write_str("UNIX subsystems initialized!\r\n\r\n");
 }
 
 // Basic memory test
@@ -194,10 +230,13 @@ pub extern "C" fn rust_main() -> ! {
         }
     }
     
-    // Hardware tests completed, start interactive shell
+    // Hardware tests completed, initialize UNIX subsystems
+    init_unix_subsystems();
+    
+    // Start interactive shell
     UART.write_str("\r\n");
     UART.write_str("========================================\r\n");
-    UART.write_str("   HARDWARE TESTS COMPLETED!           \r\n");
+    UART.write_str("   UNIX-COMPATIBLE OS READY!           \r\n");
     UART.write_str("   Starting Interactive Shell...       \r\n");
     UART.write_str("========================================\r\n");
     UART.write_str("\r\n");

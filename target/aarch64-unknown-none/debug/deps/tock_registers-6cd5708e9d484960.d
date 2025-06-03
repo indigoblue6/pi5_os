@@ -1,0 +1,10 @@
+/home/lambda/pi5_os/target/aarch64-unknown-none/debug/deps/tock_registers-6cd5708e9d484960.d: /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/lib.rs /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/fields.rs /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/interfaces.rs /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/macros.rs /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/registers.rs /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/local_register.rs
+
+/home/lambda/pi5_os/target/aarch64-unknown-none/debug/deps/libtock_registers-6cd5708e9d484960.rmeta: /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/lib.rs /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/fields.rs /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/interfaces.rs /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/macros.rs /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/registers.rs /home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/local_register.rs
+
+/home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/lib.rs:
+/home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/fields.rs:
+/home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/interfaces.rs:
+/home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/macros.rs:
+/home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/registers.rs:
+/home/lambda/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tock-registers-0.8.1/src/local_register.rs:
