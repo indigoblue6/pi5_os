@@ -1,0 +1,13 @@
+# Rust build artifacts
+/target/
+Cargo.lock
+
+# Binary outputs  
+kernel8.img
+*.img
+
+# MCP Server cache
+.serena/
+
+# Cargo metadata
+.cargo/
